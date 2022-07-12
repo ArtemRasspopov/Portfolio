@@ -1,0 +1,267 @@
+@import "_fonts.scss";
+@import "_normolize.scss";
+
+body {
+  min-height: 100vh;
+  background-color: #f5f0ec;
+}
+
+.main-section {
+  padding: 0 20px;
+  min-height: 100vh;
+}
+
+.first-screen {
+  height: 135vh;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  padding-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  &__title {
+    font-weight: 600;
+    font-family: "Syncopate", sans-serif;
+    text-transform: uppercase;
+    color: #464646;
+    letter-spacing: 1px;
+    font-size: 25px;
+    line-height: 32px;
+
+    animation: showInTop 1.6s;
+  }
+
+  &__menu {
+    background-color: #f5f0ec;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  font-family: "Bebas Neue", cursive;
+  font-weight: 400;
+  font-size: 150px;
+  letter-spacing: 10px;
+  display: block;
+  margin: 0 auto;
+  line-height: 100%;
+
+  &__first {
+    animation: showInLeft 1s;
+  }
+  
+  &__two {
+    animation: showInLeft 1.2s;
+  }
+
+  &__three {
+    animation: showInLeft 1.6s;
+  }
+
+
+
+  div {
+    display: flex;
+  }
+
+  // p:nth-child(1){
+  //   color: #828282;
+  // }
+
+  p:nth-child(3) {
+    color: #828282;
+  }
+}
+
+.subtitle {
+  color: azure;
+}
+
+.about {
+  min-height: 100vh;
+  display: flex;
+  justify-content: end;
+  position: relative;
+
+  &__image {
+    width: 500px;
+    height: 800px;
+    background-image: url(../images/-MmL4aV1Ryo.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  &__text {
+    padding: 10px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    display: block;
+    max-width: 700px;
+    z-index: 1;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140%;
+    letter-spacing: 1px;
+    color: #464646;
+    // background-color: rgb(50 61 90 / 58%);
+  }
+}
+
+.skills {
+  margin-top: 200px;
+  display: flex;
+  justify-content: space-between;
+  padding: 100px 200px;
+  padding-bottom: 1300px;
+  font-family: "Poppins", sans-serif;
+
+  &__title {
+    font-size: 30px;
+    opacity: 0.7;
+    text-transform: uppercase;
+  }
+
+  svg {
+    width: 130px;
+    height: 130px;
+    margin-top: -20px;
+    object-fit: contain;
+  }
+
+  p {
+    padding-top: 20px;
+    display: block;
+    min-width: max-content;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #464646;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-size: 40px;
+  }
+
+  .sub {
+    max-width: max-content;
+    padding-left: 30px;
+    font-size: 20px;
+    opacity: 0.7;
+
+    &:nth-child(2) {
+      padding-top: 30px;
+    }
+
+    &:nth-child(3) {
+      padding-top: 0px;
+    }
+
+    &:nth-child(4) {
+      padding-top: 0px;
+    }
+
+    &:nth-child(5) {
+      padding-top: 0px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 200px;
+  }
+}
+
+.skills__block { 
+  display: flex;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.contacts {
+  margin-top: -1100px;
+  padding-bottom: 100px;
+
+  &__title {
+    display: block;
+    margin-bottom: 200px;
+    // z-index: 1;
+    // background-color: #f5f0ecfa;
+  }
+
+  &__item {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 60px;
+    text-transform: uppercase;
+    color: #454545;
+    margin-bottom: 150px;
+    display: flex;
+    gap: 100px;
+
+    &-inner {
+      margin-top: -60px;
+      width: 200px;
+      height: 200px;
+
+      background-size: contain;
+      position: relative;
+
+      span {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 100%;
+        background-color: #f5f0ec;
+        transition: all 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          width: 60px;
+          height: 60px;
+          opacity: 0;
+          transition: all 0.1s;
+        }
+      }
+
+      &:hover span {
+        right: 0;
+
+        img {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}
+
+@keyframes showInLeft {
+  from {
+    margin-left: -200%;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+
+@keyframes showInTop {
+  from {
+    margin-top: -100%;
+  }
+  to {
+    margin-top: 0;
+  }
+}
